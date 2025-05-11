@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canım Anneme - Anneler Günü Mektubu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8f0;
+      color: #333;
+      margin: 20px;
+      padding: 0 15px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #d35400;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1.1em;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2em;
+      font-style: italic;
+      color: #a67c00;
+    }
+  </style>
+</head>
+<body>
+  <h1>Canım Anneme</h1>
+  <p>İlkokuldayken de sana mektup yazıyordum canım anam. Şimdi de böyle bir şeyin manidar olacağını düşündüm.</p>
+  <p>Öncelikle söylemek istiyorum ki hayatımın ilk yıllarında benle yeterince vakit geçiremediğin için üzülme, senin ablamla benim için para kazanman gerekiyordu ve yapman gerekeni yaptın.</p>
+  <p>Ben küçükken çok üzülüyordum ama büyüyünce anladım. Küçüklüğümde benimle vakit geçiremediğin için sana laf ettiysem özür dilerim, uzun süredir öyle düşünmüyorum.</p>
+  <p>Bence her şeye rağmen çok iyi bir annesin 🫶🏻. Ayrıca ben büyüdükten sonra bol bol vakit geçirdik ve geçiriyoruz bence. İyi ki varsın canım anam, seni çok seviyorum 🥰.</p>
+  <footer>Anneler Günü'n kutlu olsun ❤️</footer>
+</body>
+</html>
