@@ -3,42 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Canım Anneme - Anneler Günü Mektubu</title>
+  <title>Canım Anama - Anneler Günü Mektubu</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff8f0;
-      color: #333;
-      margin: 20px;
-      padding: 0 15px;
+      background: #f2e9e1 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+      font-family: 'Indie Flower', cursive, Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      color: #4b3b2b;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .letter {
+      background: #fffef8;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+      padding: 40px 50px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border: 1px solid #d8cfc4;
+      border-radius: 10px;
+      line-height: 1.8;
+      font-size: 1.3em;
+      position: relative;
+      z-index: 10;
     }
+
+    .letter::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      border: 2px dashed #d8cfc4;
+      border-radius: 10px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
     h1 {
-      color: #d35400;
       text-align: center;
+      color: #a0522d;
       margin-bottom: 1em;
+      font-size: 2.2em;
+      font-weight: normal;
     }
+
     p {
       margin-bottom: 1.2em;
-      font-size: 1.1em;
+      white-space: pre-line; /* Satır sonlarını korur */
     }
+
     footer {
-      text-align: center;
       margin-top: 2em;
+      text-align: center;
       font-style: italic;
       color: #a67c00;
+    }
+
+    /* Kalp stili */
+    .heart {
+      position: absolute;
+      color: #e74c3c;
+      font-size: 2.5rem;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+      user-select: none;
+      pointer-events: none;
+      filter: drop-shadow(0 0 2px #c0392b);
+    }
+
+    /* Farklı kalpler için farklı konum ve animasyon gecikmesi */
+    .heart:nth-child(1) {
+      left: 10%;
+      top: 10px;
+      animation-delay: 0s;
+      font-size: 3rem;
+    }
+    .heart:nth-child(2) {
+      left: 30%;
+      top: 30px;
+      animation-delay: 2s;
+      font-size: 2rem;
+    }
+    .heart:nth-child(3) {
+      left: 50%;
+      top: 15px;
+      animation-delay: 1s;
+      font-size: 2.5rem;
+    }
+    .heart:nth-child(4) {
+      left: 70%;
+      top: 25px;
+      animation-delay: 3s;
+      font-size: 3rem;
+    }
+    .heart:nth-child(5) {
+      left: 85%;
+      top: 10px;
+      animation-delay: 4s;
+      font-size: 2rem;
+    }
+
+    /* Kalplerin yukarı doğru hareket animasyonu */
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Sayfanın alt kısmına da kalpler */
+    .heart-bottom {
+      position: absolute;
+      bottom: 10px;
+      color: #e74c3c;
+      font-size: 2.5rem;
+      animation: floatDown 6s linear infinite;
+      opacity: 0.7;
+      user-select: none;
+      pointer-events: none;
+      filter: drop-shadow(0 0 2px #c0392b);
+    }
+
+    .heart-bottom:nth-child(6) {
+      left: 15%;
+      animation-delay: 1s;
+      font-size: 2.5rem;
+    }
+    .heart-bottom:nth-child(7) {
+      left: 40%;
+      animation-delay: 3s;
+      font-size: 3rem;
+    }
+    .heart-bottom:nth-child(8) {
+      left: 60%;
+      animation-delay: 0s;
+      font-size: 2rem;
+    }
+    .heart-bottom:nth-child(9) {
+      left: 80%;
+      animation-delay: 2s;
+      font-size: 2.8rem;
+    }
+
+    @keyframes floatDown {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100px) scale(1.2);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Canım Anneme</h1>
-  <p>İlkokuldayken de sana mektup yazıyordum canım anam. Şimdi de böyle bir şeyin manidar olacağını düşündüm.</p>
-  <p>Öncelikle söylemek istiyorum ki hayatımın ilk yıllarında benle yeterince vakit geçiremediğin için üzülme, senin ablamla benim için para kazanman gerekiyordu ve yapman gerekeni yaptın.</p>
-  <p>Ben küçükken çok üzülüyordum ama büyüyünce anladım. Küçüklüğümde benimle vakit geçiremediğin için sana laf ettiysem özür dilerim, uzun süredir öyle düşünmüyorum.</p>
-  <p>Bence her şeye rağmen çok iyi bir annesin 🫶🏻. Ayrıca ben büyüdükten sonra bol bol vakit geçirdik ve geçiriyoruz bence. İyi ki varsın canım anam, seni çok seviyorum 🥰.</p>
-  <footer>Anneler Günü'n kutlu olsun ❤️</footer>
+  <!-- Üst kalpler -->
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+  <div class="heart">❤️</div>
+
+  <article class="letter">
+    <h1>Canım Anneme</h1>
+    <p>İlkokuldayken de sana mektup yazıyordum canım anam. Şimdi de böyle bir şeyin manidar olacağını düşündüm.</p>
+    <p>Öncelikle söylemek istiyorum ki hayatımın ilk yıllarında benle yeterince vakit geçiremediğin için üzülme, senin ablamla benim için para kazanman gerekiyordu ve yapman gerekeni yaptın.</p>
+    <p>Ben küçükken çok üzülüyordum ama büyüyünce anladım. Küçüklüğümde benimle vakit geçiremediğin için sana laf ettiysem özür dilerim, uzun süredir öyle düşünmüyorum.</p>
+    <p>Bence her şeye rağmen çok iyi bir annesin 🫶🏻. Ayrıca ben büyüdükten sonra bol bol vakit geçirdik ve geçiriyoruz bence. İyi ki varsın canım anam, seni çok seviyorum 🥰.</p>
+    <footer>Anneler Günü'n kutlu olsun ❤️</footer>
+  </article>
+
+  <!-- Alt kalpler -->
+  <div class="heart-bottom">❤️</div>
+  <div class="heart-bottom">❤️</div>
+  <div class="heart-bottom">❤️</div>
+  <div class="heart-bottom">❤️</div>
 </body>
 </html>
