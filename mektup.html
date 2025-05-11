@@ -1,225 +1,140 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Canım Anama - Anneler Günü Mektubu</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Canım Anam</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
-    body {
-      background: #f2e9e1 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
-      font-family: 'Indie Flower', cursive, Arial, sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      color: #4b3b2b;
-      position: relative;
-      overflow-x: hidden;
-    }
+  body {
+    background: #f2e9e1 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+    font-family: 'Indie Flower', cursive, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    color: #4b3b2b;
+    position: relative;
+    overflow-x: hidden;
+  }
 
-    .letter {
-      background: #fffef8;
-      max-width: 600px;
-      padding: 40px 50px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      border: 1px solid #d8cfc4;
-      border-radius: 10px;
-      line-height: 1.8;
-      font-size: 1.3em;
-      position: relative;
-      z-index: 10;
-      white-space: pre-line; /* Satır sonlarını korur */
-    }
+  .letter {
+    background: #fffef8;
+    max-width: 600px;
+    padding: 40px 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 1px solid #d8cfc4;
+    border-radius: 10px;
+    line-height: 1.8;
+    font-size: 1.3em;
+    position: relative;
+    z-index: 10;
+    white-space: pre-line;
+  }
 
-    .letter::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      border: 2px dashed #d8cfc4;
-      border-radius: 10px;
-      pointer-events: none;
-      z-index: -1;
-    }
+  .letter::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px dashed #d8cfc4;
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: -1;
+  }
 
-    h1 {
-      text-align: center;
-      color: #a0522d;
-      margin-bottom: 1em;
-      font-size: 2.2em;
-      font-weight: normal;
-    }
+  h1 {
+    text-align: center;
+    color: #a0522d;
+    margin-bottom: 1em;
+    font-size: 2.2em;
+    font-weight: normal;
+  }
 
-    footer {
-      margin-top: 2em;
-      text-align: center;
-      font-style: italic;
-      color: #a67c00;
-    }
+  footer {
+    margin-top: 2em;
+    text-align: center;
+    font-style: italic;
+    color: #a67c00;
+  }
 
-    /* Kalp stili */
-    .heart {
-      position: absolute;
-      font-size: 2.5rem;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.8;
-      user-select: none;
-      pointer-events: none;
-      filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
-      will-change: transform, opacity;
-      border-radius: 50%;
-    }
+  /* Kalp stili */
+  .heart {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.8;
+    user-select: none;
+    pointer-events: none;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
+    will-change: transform, opacity;
+  }
 
-    /* Renkli kalpler için renkler */
-    .red { color: #e74c3c; }
-    .pink { color: #ff6f91; }
-    .purple { color: #9b59b6; }
-    .orange { color: #e67e22; }
-    .yellow { color: #f1c40f; }
+  /* Renkler */
+  .red { color: #e74c3c; }
+  .pink { color: #ff6f91; }
+  .purple { color: #9b59b6; }
+  .orange { color: #e67e22; }
+  .yellow { color: #f1c40f; }
 
-    /* Üst kalpler */
-    .heart:nth-child(1) {
-      left: 10%;
-      top: 10px;
-      animation-delay: 0s;
-      font-size: 3rem;
-    }
-    .heart:nth-child(2) {
-      left: 30%;
-      top: 30px;
-      animation-delay: 2s;
-      font-size: 2rem;
-    }
-    .heart:nth-child(3) {
-      left: 50%;
-      top: 15px;
-      animation-delay: 1s;
-      font-size: 2.5rem;
-    }
-    .heart:nth-child(4) {
-      left: 70%;
-      top: 25px;
-      animation-delay: 3s;
-      font-size: 3rem;
-    }
-    .heart:nth-child(5) {
-      left: 85%;
-      top: 10px;
-      animation-delay: 4s;
-      font-size: 2rem;
-    }
+  /* Üst kalpler */
+  .heart:nth-child(1) { left: 10%; top: 10px; animation-delay: 0s; font-size: 3rem; }
+  .heart:nth-child(2) { left: 30%; top: 30px; animation-delay: 2s; font-size: 2rem; }
+  .heart:nth-child(3) { left: 50%; top: 15px; animation-delay: 1s; font-size: 2.5rem; }
+  .heart:nth-child(4) { left: 70%; top: 25px; animation-delay: 3s; font-size: 3rem; }
+  .heart:nth-child(5) { left: 85%; top: 10px; animation-delay: 4s; font-size: 2rem; }
 
-    /* Sol yan kalpler */
-    .heart-left {
-      left: 5px;
-      font-size: 2rem;
-      animation: floatUpSide 7s linear infinite;
-      opacity: 0.8;
-      pointer-events: none;
-      user-select: none;
-    }
-    .heart-left:nth-child(6) {
-      top: 20%;
-      animation-delay: 0s;
-      color: #e74c3c;
-    }
-    .heart-left:nth-child(7) {
-      top: 40%;
-      animation-delay: 2s;
-      color: #ff6f91;
-      font-size: 2.5rem;
-    }
-    .heart-left:nth-child(8) {
-      top: 60%;
-      animation-delay: 4s;
-      color: #9b59b6;
-    }
-    .heart-left:nth-child(9) {
-      top: 80%;
-      animation-delay: 1s;
-      color: #f1c40f;
-      font-size: 2.2rem;
-    }
+  /* Sol yan kalpler */
+  .heart-left {
+    left: 5px;
+    font-size: 2rem;
+    animation: floatUpSide 7s linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+    user-select: none;
+    z-index: 9;
+  }
+  .heart-left:nth-of-type(6) { top: 20%; animation-delay: 0s; color: #e74c3c; }
+  .heart-left:nth-of-type(7) { top: 40%; animation-delay: 2s; color: #ff6f91; font-size: 2.5rem; }
+  .heart-left:nth-of-type(8) { top: 60%; animation-delay: 4s; color: #9b59b6; }
+  .heart-left:nth-of-type(9) { top: 80%; animation-delay: 1s; color: #f1c40f; font-size: 2.2rem; }
 
-    /* Sağ yan kalpler */
-    .heart-right {
-      right: 5px;
-      font-size: 2rem;
-      animation: floatUpSide 6s linear infinite reverse;
-      opacity: 0.8;
-      pointer-events: none;
-      user-select: none;
-    }
-    .heart-right:nth-child(10) {
-      top: 15%;
-      animation-delay: 1s;
-      color: #e67e22;
-    }
-    .heart-right:nth-child(11) {
-      top: 35%;
-      animation-delay: 3s;
-      color: #ff6f91;
-      font-size: 2.5rem;
-    }
-    .heart-right:nth-child(12) {
-      top: 55%;
-      animation-delay: 5s;
-      color: #9b59b6;
-    }
-    .heart-right:nth-child(13) {
-      top: 75%;
-      animation-delay: 0s;
-      color: #f1c40f;
-      font-size: 2.2rem;
-    }
+  /* Sağ yan kalpler */
+  .heart-right {
+    right: 5px;
+    font-size: 2rem;
+    animation: floatUpSide 6s linear infinite reverse;
+    opacity: 0.8;
+    pointer-events: none;
+    user-select: none;
+    z-index: 9;
+  }
+  .heart-right:nth-of-type(10) { top: 15%; animation-delay: 1s; color: #e67e22; }
+  .heart-right:nth-of-type(11) { top: 35%; animation-delay: 3s; color: #ff6f91; font-size: 2.5rem; }
+  .heart-right:nth-of-type(12) { top: 55%; animation-delay: 5s; color: #9b59b6; }
+  .heart-right:nth-of-type(13) { top: 75%; animation-delay: 0s; color: #f1c40f; font-size: 2.2rem; }
 
-    /* Kalplerin yukarı doğru hareket animasyonu */
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.8;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100px) scale(1.2);
-        opacity: 0;
-      }
-    }
+  /* Animasyonlar */
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+  }
 
-    /* Yan kalpler için yukarı hareket ve hafif sağ-sol salınım */
-    @keyframes floatUpSide {
-      0% {
-        transform: translateY(0) translateX(0) scale(1);
-        opacity: 0.8;
-      }
-      25% {
-        transform: translateY(-30px) translateX(5px) scale(1.1);
-        opacity: 1;
-      }
-      50% {
-        transform: translateY(-60px) translateX(0) scale(1.2);
-        opacity: 0.9;
-      }
-      75% {
-        transform: translateY(-90px) translateX(-5px) scale(1.1);
-        opacity: 0.7;
-      }
-      100% {
-        transform: translateY(-120px) translateX(0) scale(1);
-        opacity: 0;
-      }
-    }
-  </style>
+  @keyframes floatUpSide {
+    0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.8; }
+    25% { transform: translateY(-30px) translateX(5px) scale(1.1); opacity: 1; }
+    50% { transform: translateY(-60px) translateX(0) scale(1.2); opacity: 0.9; }
+    75% { transform: translateY(-90px) translateX(-5px) scale(1.1); opacity: 0.7; }
+    100% { transform: translateY(-120px) translateX(0) scale(1); opacity: 0; }
+  }
+</style>
 </head>
 <body>
-  <!-- Üst kalpler (5 adet) -->
   <div class="heart red">❤️</div>
   <div class="heart pink">❤️</div>
   <div class="heart purple">❤️</div>
@@ -228,21 +143,18 @@
 
   <article class="letter">
     <h1>Canım Anama</h1>
-    <p>İlkokuldayken de sana mektup yazıyordum canım anam. Şimdi de böyle bir şeyin manidar olacağını düşündüm. Öncelikle söylemek istiyorum ki hayatımın ilk yıllarında benle yeterince vakit geçiremediğin için üzülme, senin ablamla benim için para kazanman gerekiyordu ve yapman gerekeni yaptın. Sen hep ablam da ben de iyi olalım diye çabaladın. Ben küçükken çok üzülüyordum ama büyüyünce anladım bunu. Küçüklüğümde benimle vakit geçiremediğin için sana laf ettiğim için özür dilerim, uzun süredir öyle düşünmüyorum. Bence her şeye rağmen çok iyi bir annesin 🫶🏻. Ayrıca ben büyüdükten sonra bol bol vakit geçirdik ve geçiriyoruz bence. İyi ki varsın canım anam, seni çok seviyorum 🥰.</p>
+    <p>İlkokuldayken de sana mektup yazıyordum canım anam. Şimdi de böyle bir şeyin manidar olacağını düşündüm. Öncelikle söylemek istiyorum ki hayatımın ilk yıllarında benle yeterince vakit geçiremediğin için üzülme, senin ablamla benim için para kazanman gerekiyordu ve yapman gerekeni yaptın. Ben küçükken çok üzülüyordum ama büyüyünce anladım. Küçüklüğümde benimle vakit geçiremediğin için sana laf ettiysem özür dilerim, uzun süredir öyle düşünmüyorum. Bence her şeye rağmen çok iyi bir annesin 🫶🏻. Ayrıca ben büyüdükten sonra bol bol vakit geçirdik ve geçiriyoruz bence. İyi ki varsın canım anam, seni çok seviyorum 🥰.</p>
     <footer>Anneler Günü'n kutlu olsun ❤️</footer>
   </article>
 
-  <!-- Sol yan kalpler (4 adet) -->
   <div class="heart heart-left red">❤️</div>
   <div class="heart heart-left pink">❤️</div>
   <div class="heart heart-left purple">❤️</div>
   <div class="heart heart-left yellow">❤️</div>
 
-  <!-- Sağ yan kalpler (4 adet) -->
   <div class="heart heart-right orange">❤️</div>
   <div class="heart heart-right pink">❤️</div>
   <div class="heart heart-right purple">❤️</div>
   <div class="heart heart-right yellow">❤️</div>
 </body>
 </html>
-
